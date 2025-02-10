@@ -1,0 +1,30 @@
+programa {
+    funcao inicio() {
+        inteiro A
+        inteiro matriz[10][10]
+        inteiro i, j
+
+       
+        escreva("Digite a ordem da matriz (A): ")
+        leia(A)
+
+       
+        para (i = 0; i < A; i++) {
+            para (j = 0; j < A; j++) {
+                se (i == j) {
+                    matriz[i] [j] = 1 
+                } senao {
+                    matriz[i] [j] = 0 
+                }
+            }
+        }
+
+        escreva("Matriz identidade de ordem ", A, ":\n")
+        para (i = 0; i < A; i++) {
+            para (j = 0; j < A; j++) {
+                escreva(matriz[i] [j], " ")
+            }
+            escreva("\n")
+        }
+    }
+}
