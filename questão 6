@@ -1,0 +1,64 @@
+programa {
+    funcao inicio() {
+        inteiro m, p, n
+        inteiro A[10][10]
+        inteiro B[10][10]
+        inteiro C[10][10]
+        inteiro i, j, k
+
+        
+        escreva("Digite o número de linhas de A (m): ")
+        leia(m)
+        escreva("Digite o número de colunas de A (p): ")
+        leia(p)
+        escreva("Digite o número de colunas de B (n): ")
+        leia(n)
+
+        
+        se (p > n) {
+            escreva("A multiplicação não é possível. O número de colunas de A deve ser igual ao número de linhas de B.\n")
+           
+        }
+
+        
+        para (i = 0; i < m; i++) {
+            para (j = 0; j < p; j++) {
+                escreva("Digite o elemento A[", i+1, ",", j+1, "]: ")
+                leia(A[i] [j])
+            }
+        }
+
+        
+        para (i = 0; i < p; i++) {
+            para (j = 0; j < n; j++) {
+                escreva("Digite o elemento B[", i+1, ",", j+1, "]: ")
+                leia(B[i] [j])
+            }
+        }
+
+        
+        para (i = 0; i < m; i++) {
+            para (j = 0; j < n; j++) {
+                C[i] [j] = 0
+            }
+        }
+
+        
+        para (i = 0; i < m; i++) {
+            para (j = 0; j < n; j++) {
+                para (k = 0; k < p; k++) {
+                    C[i] [j] = C[i] [j] + A[i] [k] * B[k] [j]
+                }
+            }
+        }
+
+        
+        escreva("Matriz C (resultado de A * B):\n")
+        para (i = 0; i < m; i++) {
+            para (j = 0; j < n; j++) {
+                escreva(C[i] [j], " ")
+            }
+            escreva("\n")
+        }
+    }
+}
