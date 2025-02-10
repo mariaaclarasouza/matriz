@@ -1,0 +1,33 @@
+programa {
+    funcao inicio() {
+
+        inteiro m[5] [5]
+        inteiro x, i, j, achou = 0, linha = 0, coluna = 0
+
+        para (i=0; i <5; i ++){
+            para (j=0; j<5; j++) {
+                escreva("Digite o elemento [" + i + "," + j + "] da matriz: ")
+                leia(m[i] [j])
+            }
+        }
+
+        escreva("Digite o valor X para busca: ")
+        leia(x)
+
+        para (i=0; i <5; i ++){
+            para (j=0; j <5; j ++){
+                se (m[i] [j] == x){
+                    achou = 1
+                    linha = i
+                    coluna = j
+                }
+            }
+        }
+
+        se (achou == 1){
+            escreva("Valor X encontrado na linha " + linha + " e coluna " + coluna)
+        } senao {
+            escreva("Valor X não encontrado na matriz")
+        }
+    }
+}
