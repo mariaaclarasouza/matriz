@@ -1,0 +1,25 @@
+programa
+{
+    funcao inicio()
+    {
+        inteiro matriz[4][4]
+        inteiro i, j
+        
+        para (i = 0; i < 4; i++)
+        {
+            para (j = 0; j < 4; j++)
+            {
+                matriz[i][j] = i * j
+            }
+        }
+        escreva("Matriz 4 x 4:\n")
+        para (i = 0; i < 4; i++)
+        {
+            para (j = 0; j < 4; j++)
+            {
+                escreva(matriz[i][j], "\t")
+            }
+            escreva("\n")
+        }
+    }
+}
